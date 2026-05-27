@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solva — Gizlilik Politikası / Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B2540;
+    --bg-soft: #0F2C4D;
+    --accent: #A0E1E1;
+    --text: #E8EEF5;
+    --text-muted: #8FA4BD;
+    --border: rgba(160, 225, 225, 0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 32px 80px;
+  }
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .brand img {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+  }
+  .brand-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-name {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .brand-mail {
+    color: var(--text-muted);
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .brand-mail:hover { color: var(--accent); }
+  /* Language toggle */
+  .lang-toggle {
+    display: flex;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px;
+  }
+  .lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .lang-btn.active {
+    background: var(--accent);
+    color: var(--bg);
+  }
+  /* Back link */
+  .back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 32px;
+    transition: color 0.2s;
+  }
+  .back:hover { color: var(--accent); }
+  /* Content */
+  h1 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  .highlight {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin: 24px 0 40px;
+    font-size: 15px;
+  }
+  h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 36px;
+    margin-bottom: 14px;
+    color: var(--accent);
+  }
+  p {
+    font-size: 15.5px;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  ul {
+    padding-left: 22px;
+    margin-bottom: 16px;
+  }
+  li {
+    font-size: 15.5px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  strong { color: var(--accent); font-weight: 500; }
+  a.inline { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(160,225,225,0.3); }
+  a.inline:hover { border-bottom-color: var(--accent); }
+  /* Footer */
+  footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .footer-brand img {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+  }
+  .footer-brand a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+  }
+  .footer-brand a:hover { color: var(--accent); }
+  .footer-copy { font-size: 12px; color: var(--text-muted); }
+  /* Language sections */
+  [data-lang] { display: none; }
+  [data-lang].active { display: block; }
+  @media (max-width: 600px) {
+    .container { padding: 40px 20px 56px; }
+    h1 { font-size: 30px; }
+    header { flex-direction: column; align-items: flex-start; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="brand">
+      <img src="logo.svg" alt="Solva logo">
+      <div class="brand-info">
+        <span class="brand-name">Solva</span>
+        <a href="mailto:[email protected]" class="brand-mail">[email protected]</a>
+      </div>
+    </div>
+    <div class="lang-toggle" role="tablist">
+      <button class="lang-btn active" data-lang-btn="tr" aria-label="Türkçe">TR</button>
+      <button class="lang-btn" data-lang-btn="en" aria-label="English">EN</button>
+    </div>
+  </header>
+
+  <a href="index.html" class="back">← Geri / Back</a>
+
+  <!-- TÜRKÇE -->
+  <div data-lang="tr" class="active">
+    <h1>Gizlilik Politikası</h1>
+    <p class="meta">Son güncelleme: 27 Mayıs 2026</p>
+
+    <div class="highlight">
+      <strong>Özet:</strong> Solva sizinle ilgili hiçbir veri toplamaz. Hesabınız yoktur, sunucumuz yoktur. Tüm verileriniz yalnızca cihazınızda kalır.
+    </div>
+
+    <h2>1. Topladığımız Veriler</h2>
+    <p><strong>Hiçbiri.</strong> Solva ("uygulama"), kullanıcılarından herhangi bir kişisel veri toplamaz, depolamaz veya iletmez. Bu, aşağıdakileri içerir:</p>
+    <ul>
+      <li>Ad, e-posta, telefon numarası veya kimlik bilgisi yoktur</li>
+      <li>Konum verisi yoktur</li>
+      <li>Cihaz tanımlayıcıları (IDFA, Android Advertising ID vb.) toplanmaz</li>
+      <li>Kullanım analitiği, telemetri veya çökme raporu gönderilmez</li>
+      <li>Reklam ağı veya üçüncü taraf SDK kullanılmaz</li>
+    </ul>
+
+    <h2>2. Cihazınızda Depolanan Veriler</h2>
+    <p>Uygulamayı kullandığınızda, aşağıdaki bilgiler <strong>yalnızca kendi cihazınızda</strong>, yerel veritabanında saklanır:</p>
+    <ul>
+      <li>İlaç bilgileri (ad, doz, form, talimatlar)</li>
+      <li>İlaç zamanlamaları ve hatırlatma saatleri</li>
+      <li>Doz alma geçmişi (alındı / atlandı / ertelendi)</li>
+      <li>Tercih ettiğiniz dil, avatar ve uygulama ayarları</li>
+    </ul>
+    <p>Bu veriler bizim sunucularımıza, üçüncü taraflara veya buluta <strong>asla</strong> gönderilmez. Bizim bu verilere erişimimiz yoktur.</p>
+
+    <h2>3. Bildirimler</h2>
+    <p>Solva, ilaç hatırlatmaları için cihazınızın yerel bildirim sistemini kullanır. Bildirimler cihazınız tarafından planlanır ve cihazınız tarafından gösterilir; herhangi bir sunucu üzerinden gönderilmez.</p>
+
+    <h2>4. Cihaz İzinleri</h2>
+    <p>Uygulamanın çalışması için aşağıdaki izinleri isteyebiliriz:</p>
+    <ul>
+      <li><strong>Bildirim izni</strong> — ilaç hatırlatmaları için zorunlu</li>
+      <li><strong>Tam zamanlı alarm (Android)</strong> — bildirimlerin tam saatinde çalması için</li>
+      <li><strong>Pil optimizasyonu istisnası (Android)</strong> — bildirimlerin güvenilir çalışması için isteğe bağlı</li>
+      <li><strong>Kritik Uyarılar (iOS)</strong> — sessiz modda bile çalan medikal hatırlatmalar için isteğe bağlı</li>
+    </ul>
+    <p>Bu izinler yalnızca cihazınızda işlev görmek içindir. Hiçbiri bizimle veri paylaşmaz.</p>
+
+    <h2>5. Veri Silme</h2>
+    <p>Bizim sileceğimiz bir veriniz yok — çünkü bizde hiçbir veri yok. Cihazınızdaki verileri silmek için iki seçeneğiniz var:</p>
+    <ul>
+      <li>Uygulama içindeki <strong>Ayarlar → Tüm verileri sil</strong> seçeneği</li>
+      <li>Uygulamayı cihazınızdan kaldırmak (bu, tüm yerel verileri silecektir)</li>
+    </ul>
+
+    <h2>6. Çocuklar</h2>
+    <p>Solva, 13 yaşın altındaki kullanıcılara yönelik tasarlanmamıştır. Yine de hiçbir veri toplanmadığı için yaş ile ilgili özel bir risk söz konusu değildir.</p>
+
+    <h2>7. Üçüncü Taraf Hizmetler</h2>
+    <p>Solva, uygulamanın temel işlevi için <strong>hiçbir üçüncü taraf hizmeti</strong> kullanmaz. Reklam ağı, analitik servisi veya bulut hizmeti entegrasyonu yoktur.</p>
+
+    <h2>8. KVKK ve GDPR</h2>
+    <p>Hiçbir kişisel veri işlenmediği, depolanmadığı veya iletilmediği için Kişisel Verilerin Korunması Kanunu (KVKK) ve General Data Protection Regulation (GDPR) yükümlülükleri Solva için minimum düzeyde geçerlidir. Yine de bu politikayı şeffaflık adına yayınlıyoruz.</p>
+
+    <h2>9. Bu Politikadaki Değişiklikler</h2>
+    <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler bu sayfa üzerinden duyurulur ve "Son güncelleme" tarihi değişir.</p>
+
+    <h2>10. İletişim</h2>
+    <p>Sorularınız için: <a href="mailto:[email protected]" class="inline">[email protected]</a></p>
+  </div>
+
+  <!-- ENGLISH -->
+  <div data-lang="en">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: May 27, 2026</p>
+
+    <div class="highlight">
+      <strong>Summary:</strong> Solva collects no data about you. There are no accounts, no servers. All your data stays only on your device.
+    </div>
+
+    <h2>1. Data We Collect</h2>
+    <p><strong>None.</strong> Solva (the "app") does not collect, store, or transmit any personal data from its users. This includes:</p>
+    <ul>
+      <li>No name, email, phone number, or identifying information</li>
+      <li>No location data</li>
+      <li>No device identifiers (IDFA, Android Advertising ID, etc.)</li>
+      <li>No usage analytics, telemetry, or crash reports</li>
+      <li>No ad networks or third-party SDKs</li>
+    </ul>
+
+    <h2>2. Data Stored on Your Device</h2>
+    <p>When you use the app, the following information is stored <strong>only on your own device</strong> in a local database:</p>
+    <ul>
+      <li>Medication details (name, dosage, form, instructions)</li>
+      <li>Schedules and reminder times</li>
+      <li>Dose history (taken / skipped / snoozed)</li>
+      <li>Your preferred language, avatar, and app settings</li>
+    </ul>
+    <p>This data is <strong>never</strong> sent to our servers, third parties, or the cloud. We have no access to it.</p>
+
+    <h2>3. Notifications</h2>
+    <p>Solva uses your device's local notification system for medication reminders. Notifications are scheduled and delivered by your device itself, not through any server.</p>
+
+    <h2>4. Device Permissions</h2>
+    <p>The app may request the following permissions to function:</p>
+    <ul>
+      <li><strong>Notification permission</strong> — required for medication reminders</li>
+      <li><strong>Exact alarm (Android)</strong> — so reminders fire at the precise time</li>
+      <li><strong>Battery optimization exception (Android)</strong> — optional, for reliable delivery</li>
+      <li><strong>Critical Alerts (iOS)</strong> — optional, for medical reminders that work even in silent mode</li>
+    </ul>
+    <p>These permissions function locally on your device only. None of them share data with us.</p>
+
+    <h2>5. Data Deletion</h2>
+    <p>There is no data for us to delete — because we don't have any. To erase data on your device, you have two options:</p>
+    <ul>
+      <li>The in-app <strong>Settings → Delete all data</strong> option</li>
+      <li>Uninstalling the app from your device (this removes all local data)</li>
+    </ul>
+
+    <h2>6. Children</h2>
+    <p>Solva is not designed for users under the age of 13. However, since no data is collected, there is no specific risk related to age.</p>
+
+    <h2>7. Third-Party Services</h2>
+    <p>Solva uses <strong>no third-party services</strong> for its core functionality. There are no ad network, analytics service, or cloud service integrations.</p>
+
+    <h2>8. GDPR and KVKK</h2>
+    <p>Since no personal data is processed, stored, or transmitted, the obligations of the General Data Protection Regulation (GDPR) and Turkey's Personal Data Protection Law (KVKK) apply only minimally to Solva. We still publish this policy for transparency.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. Significant changes will be announced through this page and reflected in the "Last updated" date.</p>
+
+    <h2>10. Contact</h2>
+    <p>For any questions: <a href="mailto:[email protected]" class="inline">[email protected]</a></p>
+  </div>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="logo.svg" alt="">
+      <a href="mailto:[email protected]">[email protected]</a>
+    </div>
+    <span class="footer-copy">© 2026 Solva</span>
+  </footer>
+</div>
+
+<script>
+  // Language switcher with persistence
+  const buttons = document.querySelectorAll('[data-lang-btn]');
+  const sections = document.querySelectorAll('[data-lang]');
+
+  function setLang(lang) {
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.langBtn === lang));
+    sections.forEach(s => s.classList.toggle('active', s.dataset.lang === lang));
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('solva-lang', lang); } catch (e) {}
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.dataset.langBtn));
+  });
+
+  // Restore preference or detect browser language
+  try {
+    const saved = localStorage.getItem('solva-lang');
+    if (saved === 'tr' || saved === 'en') {
+      setLang(saved);
+    } else {
+      const browserLang = (navigator.language || 'tr').slice(0, 2).toLowerCase();
+      setLang(browserLang === 'en' ? 'en' : 'tr');
+    }
+  } catch (e) {
+    setLang('tr');
+  }
+</script>
+</body>
+</html>

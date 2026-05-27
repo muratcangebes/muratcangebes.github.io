@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solva — Kullanım Koşulları / Terms of Use</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B2540;
+    --bg-soft: #0F2C4D;
+    --accent: #A0E1E1;
+    --warning: #FFC091;
+    --text: #E8EEF5;
+    --text-muted: #8FA4BD;
+    --border: rgba(160, 225, 225, 0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 32px 80px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .brand img {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+  }
+  .brand-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-name {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .brand-mail {
+    color: var(--text-muted);
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .brand-mail:hover { color: var(--accent); }
+  .lang-toggle {
+    display: flex;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px;
+  }
+  .lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .lang-btn.active {
+    background: var(--accent);
+    color: var(--bg);
+  }
+  .back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 32px;
+    transition: color 0.2s;
+  }
+  .back:hover { color: var(--accent); }
+  h1 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  .highlight {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin: 24px 0 24px;
+    font-size: 15px;
+  }
+  .medical-warning {
+    background: rgba(255, 192, 145, 0.08);
+    border: 1px solid rgba(255, 192, 145, 0.25);
+    border-left: 3px solid var(--warning);
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin: 24px 0 40px;
+    font-size: 15px;
+  }
+  .medical-warning strong { color: var(--warning); }
+  h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 36px;
+    margin-bottom: 14px;
+    color: var(--accent);
+  }
+  p {
+    font-size: 15.5px;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  ul {
+    padding-left: 22px;
+    margin-bottom: 16px;
+  }
+  li {
+    font-size: 15.5px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  strong { color: var(--accent); font-weight: 500; }
+  a.inline { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(160,225,225,0.3); }
+  a.inline:hover { border-bottom-color: var(--accent); }
+  footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .footer-brand img {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+  }
+  .footer-brand a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+  }
+  .footer-brand a:hover { color: var(--accent); }
+  .footer-copy { font-size: 12px; color: var(--text-muted); }
+  [data-lang] { display: none; }
+  [data-lang].active { display: block; }
+  @media (max-width: 600px) {
+    .container { padding: 40px 20px 56px; }
+    h1 { font-size: 30px; }
+    header { flex-direction: column; align-items: flex-start; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="brand">
+      <img src="logo.svg" alt="Solva logo">
+      <div class="brand-info">
+        <span class="brand-name">Solva</span>
+        <a href="mailto:[email protected]" class="brand-mail">[email protected]</a>
+      </div>
+    </div>
+    <div class="lang-toggle" role="tablist">
+      <button class="lang-btn active" data-lang-btn="tr" aria-label="Türkçe">TR</button>
+      <button class="lang-btn" data-lang-btn="en" aria-label="English">EN</button>
+    </div>
+  </header>
+
+  <a href="index.html" class="back">← Geri / Back</a>
+
+  <!-- TÜRKÇE -->
+  <div data-lang="tr" class="active">
+    <h1>Kullanım Koşulları</h1>
+    <p class="meta">Son güncelleme: 27 Mayıs 2026</p>
+
+    <div class="highlight">
+      Solva uygulamasını ("uygulama") kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız. Lütfen dikkatlice okuyun.
+    </div>
+
+    <div class="medical-warning">
+      <strong>Önemli medikal uyarı:</strong> Solva bir ilaç hatırlatma aracıdır. Tıbbi tavsiye, teşhis veya tedavi sağlamaz. Sağlığınızla ilgili kararlar için her zaman doktorunuza veya nitelikli bir sağlık uzmanına danışın.
+    </div>
+
+    <h2>1. Hizmetin Tanımı</h2>
+    <p>Solva; kullanıcıların ilaçlarını kaydedip zamanlamasını yapabildiği, doz zamanı geldiğinde cihaz üzerinden yerel bildirim aldığı, gizlilik odaklı bir mobil uygulamadır. Tüm veriler kullanıcının cihazında tutulur.</p>
+
+    <h2>2. Tıbbi Sorumluluk Reddi</h2>
+    <p>Solva <strong>tıbbi bir cihaz değildir</strong>. Aşağıdakilerin yerine geçmez:</p>
+    <ul>
+      <li>Doktor muayenesi, teşhisi veya tedavisi</li>
+      <li>Reçete ya da eczacı tavsiyesi</li>
+      <li>Acil tıbbi yardım</li>
+    </ul>
+    <p>İlaç bilgilerini uygulamaya doğru girmek tamamen <strong>kullanıcının sorumluluğundadır</strong>. Uygulama, girilen bilgilerin doğruluğunu doğrulamaz ve ilaç etkileşimleri için uyarı vermez.</p>
+
+    <h2>3. Bildirimlerin Güvenilirliği</h2>
+    <p>Uygulama, bildirimlerin zamanında çalması için makul tüm çabayı gösterir. Ancak bildirimlerin teslim edilmesi, kullanıcının cihazına, işletim sistemine, pil optimizasyon ayarlarına ve diğer cihaz koşullarına bağlıdır. <strong>Solva, bildirimlerin her koşulda mutlaka çalacağını garanti edemez.</strong> Hayati öneme sahip ilaç hatırlatıcılar için yedek yöntemler (örn. fiziksel hap kutusu, başka bir alarm) kullanmanız önerilir.</p>
+
+    <h2>4. Kullanıcı Sorumlulukları</h2>
+    <p>Uygulamayı kullanırken:</p>
+    <ul>
+      <li>İlaç bilgilerini doğru ve güncel tutmak sizin sorumluluğunuzdadır</li>
+      <li>Bildirim izinlerini ve gerekli sistem ayarlarını uygulama tarafından önerildiği şekilde yapılandırmanız beklenir</li>
+      <li>Uygulamayı yalnızca yasal ve kişisel amaçlarla kullanacağınızı kabul edersiniz</li>
+      <li>Uygulamayı tersine mühendislik yapmamayı, kötüye kullanmamayı veya işlevini bozacak şekilde değiştirmemeyi kabul edersiniz</li>
+    </ul>
+
+    <h2>5. Veri ve Yedekleme</h2>
+    <p>Tüm verileriniz yalnızca cihazınızda saklanır. Bu, gizliliği maksimize eder ancak şu anlama gelir:</p>
+    <ul>
+      <li>Uygulamayı silerseniz tüm verileriniz silinir</li>
+      <li>Cihazınız kaybolur, bozulur veya sıfırlanırsa verileriniz kaybolur</li>
+      <li>Otomatik bulut yedekleme yoktur</li>
+    </ul>
+    <p>Verilerinizin kaybedilmesinden Solva sorumlu değildir.</p>
+
+    <h2>6. Fikri Mülkiyet</h2>
+    <p>Solva adı, logosu, arayüz tasarımı, kaynak kodu ve tüm görsel öğeler geliştiricinin fikri mülkiyetidir. İzinsiz kopyalanamaz, dağıtılamaz veya türev çalışma oluşturmak için kullanılamaz.</p>
+
+    <h2>7. Sorumluluğun Sınırlandırılması</h2>
+    <p>Yürürlükteki yasaların izin verdiği azami ölçüde, Solva ve geliştiricisi; uygulamanın kullanımından veya kullanılamamasından doğan doğrudan, dolaylı, arızi, özel veya cezai zararlardan sorumlu tutulamaz. Buna kaçırılan dozlar, geç bildirimler veya hatalı veri girişinden kaynaklanan sağlık sonuçları dahildir.</p>
+
+    <h2>8. Hizmette Yapılan Değişiklikler</h2>
+    <p>Geliştirici, önceden bildirimde bulunarak veya bulunmaksızın uygulamayı güncelleyebilir, özellik ekleyebilir veya kaldırabilir, ya da hizmeti sonlandırabilir.</p>
+
+    <h2>9. Bu Koşullarda Yapılan Değişiklikler</h2>
+    <p>Bu Kullanım Koşulları zaman zaman güncellenebilir. Önemli değişiklikler bu sayfada yayımlanır ve "Son güncelleme" tarihi değişir. Uygulamayı kullanmaya devam etmek, güncellenmiş koşulları kabul etmek anlamına gelir.</p>
+
+    <h2>10. Uygulanacak Hukuk</h2>
+    <p>Bu koşullar Türkiye Cumhuriyeti yasalarına tabidir. Uyuşmazlıklarda İstanbul mahkemeleri ve icra daireleri yetkilidir.</p>
+
+    <h2>11. İletişim</h2>
+    <p>Sorularınız için: <a href="mailto:[email protected]" class="inline">[email protected]</a></p>
+  </div>
+
+  <!-- ENGLISH -->
+  <div data-lang="en">
+    <h1>Terms of Use</h1>
+    <p class="meta">Last updated: May 27, 2026</p>
+
+    <div class="highlight">
+      By using the Solva application (the "app"), you agree to the following terms. Please read them carefully.
+    </div>
+
+    <div class="medical-warning">
+      <strong>Important medical notice:</strong> Solva is a medication reminder tool. It does not provide medical advice, diagnosis, or treatment. Always consult your doctor or a qualified healthcare professional for any health-related decisions.
+    </div>
+
+    <h2>1. Description of the Service</h2>
+    <p>Solva is a privacy-focused mobile application that allows users to record and schedule their medications and receive local notifications on their device when it's time for a dose. All data is stored only on the user's device.</p>
+
+    <h2>2. Medical Disclaimer</h2>
+    <p>Solva is <strong>not a medical device</strong>. It does not replace:</p>
+    <ul>
+      <li>Examination, diagnosis, or treatment by a doctor</li>
+      <li>Prescription or pharmacist advice</li>
+      <li>Emergency medical care</li>
+    </ul>
+    <p>Entering medication information correctly into the app is entirely the <strong>user's responsibility</strong>. The app does not verify the accuracy of the entered information and does not provide warnings for drug interactions.</p>
+
+    <h2>3. Reliability of Notifications</h2>
+    <p>The app makes every reasonable effort to deliver notifications on time. However, notification delivery depends on your device, its operating system, battery optimization settings, and other device conditions. <strong>Solva cannot guarantee that notifications will fire under all circumstances.</strong> For life-critical medication reminders, we recommend using backup methods (e.g., a physical pill organizer, an additional alarm).</p>
+
+    <h2>4. User Responsibilities</h2>
+    <p>While using the app, you agree that:</p>
+    <ul>
+      <li>It is your responsibility to keep medication information accurate and up to date</li>
+      <li>You will configure notification permissions and required system settings as recommended by the app</li>
+      <li>You will use the app only for lawful and personal purposes</li>
+      <li>You will not reverse engineer, misuse, or modify the app in ways that impair its function</li>
+    </ul>
+
+    <h2>5. Data and Backup</h2>
+    <p>All your data is stored only on your device. This maximizes privacy, but it also means:</p>
+    <ul>
+      <li>If you delete the app, all your data is deleted</li>
+      <li>If your device is lost, damaged, or reset, your data will be lost</li>
+      <li>There is no automatic cloud backup</li>
+    </ul>
+    <p>Solva is not responsible for the loss of your data.</p>
+
+    <h2>6. Intellectual Property</h2>
+    <p>The Solva name, logo, interface design, source code, and all visual elements are the intellectual property of the developer. They may not be copied, distributed, or used to create derivative works without permission.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, Solva and its developer shall not be liable for any direct, indirect, incidental, special, or punitive damages arising from the use of or inability to use the app. This includes missed doses, delayed notifications, or health outcomes resulting from incorrect data entry.</p>
+
+    <h2>8. Changes to the Service</h2>
+    <p>The developer may update the app, add or remove features, or discontinue the service at any time, with or without prior notice.</p>
+
+    <h2>9. Changes to These Terms</h2>
+    <p>These Terms of Use may be updated from time to time. Significant changes will be published on this page and reflected in the "Last updated" date. Continued use of the app constitutes acceptance of the updated terms.</p>
+
+    <h2>10. Governing Law</h2>
+    <p>These terms are governed by the laws of the Republic of Turkey. Any disputes shall be subject to the courts and enforcement offices of Istanbul.</p>
+
+    <h2>11. Contact</h2>
+    <p>For any questions: <a href="mailto:[email protected]" class="inline">[email protected]</a></p>
+  </div>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="logo.svg" alt="">
+      <a href="mailto:[email protected]">[email protected]</a>
+    </div>
+    <span class="footer-copy">© 2026 Solva</span>
+  </footer>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('[data-lang-btn]');
+  const sections = document.querySelectorAll('[data-lang]');
+
+  function setLang(lang) {
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.langBtn === lang));
+    sections.forEach(s => s.classList.toggle('active', s.dataset.lang === lang));
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('solva-lang', lang); } catch (e) {}
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.dataset.langBtn));
+  });
+
+  try {
+    const saved = localStorage.getItem('solva-lang');
+    if (saved === 'tr' || saved === 'en') {
+      setLang(saved);
+    } else {
+      const browserLang = (navigator.language || 'tr').slice(0, 2).toLowerCase();
+      setLang(browserLang === 'en' ? 'en' : 'tr');
+    }
+  } catch (e) {
+    setLang('tr');
+  }
+</script>
+</body>
+</html>
